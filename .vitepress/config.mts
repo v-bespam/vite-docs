@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: "/kb.github.io/",
   title: "База знаний",
   description: "Мои заметки об IT",
   themeConfig: {
