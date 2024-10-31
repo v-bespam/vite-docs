@@ -1,29 +1,48 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/kb.github.io/",
-  title: "База знаний",
-  description: "Мои заметки об IT",
+  base: "/vite-docs/",
+  lang: "ru-RU",
+  title: "📑 Документация Qtim",
+  description: "",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Главная', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: "Главная", link: "/" },
+      { text: "Qtim Space", link: "/Qtim-Space" },
+      { text: "Бакки", link: "/Бакки" },
+      { text: "Онлайн школа", link: "/Онлайн-школа" },
+      { text: "ОШ-1 сайт", link: "/ОШ-1-сайт" },
+      { text: "Понимаю", link: "/Понимаю" },
     ],
 
     sidebar: [
       {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
+        "/Qtim-Space/": [
+          {
+            text: "База знаний администратора",
+            items: [
+              { text: "Index", link: "/Qtim-Space/" },
+              { text: "One", link: "/Qtim-Space/admin/0-structure" },
+              { text: "Two", link: "/Qtim-Space/two" },
+            ],
+          },
+        ],
+
+        "/Бакки/": [
+          {
+            text: "База знаний администратора",
+            items: [
+              { text: "Index", link: "/Бакки/" },
+              { text: "One", link: "/Бакки/create-org" },
+              { text: "Two", link: "/Qtim-Space/two" },
+            ],
+          },
+        ],
+      },
     ],
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/v-bespam' }
-    ]
-  }
-})
+    socialLinks: [{ icon: "github", link: "https://github.com/v-bespam/qtim" }],
+  },
+});
